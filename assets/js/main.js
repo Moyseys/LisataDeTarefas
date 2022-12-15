@@ -2,7 +2,7 @@ let inputTarefa = document.querySelector('.input-tarefa')
 let btnTarefa = document.querySelector('.btn-tarefa')
 let tarefa = document.querySelector('.tarefas')
 
-adicionaTarefaSalva()
+if(localStorage.key(0) != null) adicionaTarefaSalva()
 
 inputTarefa.addEventListener('keypress',(e) => {
   if(!inputTarefa.value) return
