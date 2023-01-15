@@ -34,6 +34,7 @@ function criaTarefa(vl){
     let elementoLi = document.createElement('li')
     let liText = document.createTextNode(vl)
     elementoLi.appendChild(liText)
+    elementoLi.classList.add('tarefa')
     tarefa.appendChild(elementoLi)
     criaBtnApagar(elementoLi)
     limpaInput()

@@ -1,59 +1,146 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-:root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
-}
-
 * {
   box-sizing: border-box;
-  outline: 0;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: var(--primary-color);
+  background: #1E1E1E;
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
+  color: aliceblue;
+}
+
+h1{
+  font-size: 40px;
 }
 
 .container {
   width: 70%;
-  height: 70vh;
+  height: 100%;
   margin: 50px auto;
-  background: rgb(247, 247, 247);
-  padding: 20px;
+  background: #2b2b2b;
+  padding: 20px 20px 100px 20px;
   border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 70px;
 }
 
-form input, form label, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+.display{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 10px;
 }
 
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
-}
-
-form input:focus {
-  outline: 1px solid var(--primary-color);
-}
-
-form button {
-  border: none;
-  background: var(--primary-color);
+.display input{
+  background: transparent;
+  width: 70%;
+  padding: 15px 0px 10px 5px;
+  font-size: 20px;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.display input:focus{
+  background: rgba(255, 250, 240, 0.822);
+  color: rgb(0, 0, 0);
+  border: 2px solid #1E1E1E;
+}
+.display button{
+  width: 30%;
+  padding: 10px 0px 10px 0px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
 }
 
-form button:hover {
-  background: var(--primary-color-darker);
+.display button:hover{
+  background: rgb(255, 250, 240);
+  color: rgb(0, 0, 0);
+  border: 1px solid #1E1E1E;
 }
+
+.tarefas{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.tarefa{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0.5em ;
+  background-color: rgb(80, 79, 79);
+}
+
+.tarefa button{
+  padding: 5px;
+  border-color: #777777;
+  border-radius: 5px;
+
+}
+.tarefa button:hover{
+  border-color: #fff;
+  border-radius: 5px;
+  background-color: #464545;
+  padding: 5px;
+}
+
+@media(max-width: 1400px){
+  .display button{
+    font-size: 15px;
+  }
+}
+@media(max-width: 740px){
+  h1{
+    font-size: 20px;
+  }
+  .container {
+    padding: 20px 20px 20px 20px;
+    width: 90%;
+    row-gap: 50px;
+  }
+  
+  .display{
+    width: 110%;
+  }
+  
+  .display input{
+    width: 70%;
+    padding: 10px 0px 5px 5px;
+    font-size: 15px;
+  }
+  .display button{
+    width: 40%;
+    padding: 10px 5px 10px 5px;
+    font-size: 11px;
+  }
+
+  .tarefas{
+    width: 90%;
+  }
+  
+  .tarefa{
+    font-size: 15px;
+    background-color: rgb(80, 79, 79);
+  }
+
+}
+
