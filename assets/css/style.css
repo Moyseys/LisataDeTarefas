@@ -172,6 +172,10 @@ span:hover{
     padding: 7px 3px 7px 3px;
     font-size: 8px;
   }
+  
+  .retorno{
+    width: 5%;
+  }
 
   .tarefas{
     width: 90%;
