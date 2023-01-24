@@ -90,7 +90,7 @@ h1{
   background-image: url(../img/ctrlzPreto.png);
   border-radius: 5px;
 
-  animation:rotate-center .3s .2s  reverse;
+  animation:rotate-center .3s .5ms  reverse;
 }
 
 
@@ -168,13 +168,13 @@ span:hover{
     font-size: 15px;
   }
   .btn-tarefa{
-    width: 30%;
-    padding: 7px 3px 7px 3px;
-    font-size: 8px;
+    width: 25%;
+    padding: 3px 7px 3px 7px;
+    font-size: 5px;
   }
   
-  .retorno{
-    width: 5%;
+  span{
+    width: 10%;
   }
 
   .tarefas{
