@@ -42,7 +42,7 @@ h1{
 
 .display input{
   background: transparent;
-  width: 70%;
+  width: 60%;
   padding: 15px 0px 10px 5px;
   font-size: 20px;
   text-transform: uppercase;
@@ -55,8 +55,8 @@ h1{
   color: rgb(0, 0, 0);
   border: 2px solid #1E1E1E;
 }
-.display button{
-  width: 30%;
+.btn-tarefa{
+  width: 20%;
   padding: 10px 0px 10px 0px;
   border-radius: 5px;
   border: 1px solid #fff;
@@ -65,10 +65,50 @@ h1{
   font-size: 20px;
 }
 
-.display button:hover{
+.btn-tarefa{
   background: rgb(255, 250, 240);
   color: rgb(0, 0, 0);
   border: 1px solid #1E1E1E;
+}
+
+.retorno{
+  background-image: url(../img/Vector.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+
+  border: none;
+
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+
+.retorno:hover{
+  background-image: url(../img/ctrlzPreto.png);
+  border-radius: 5px;
+
+  animation:rotate-center .3s .2s  reverse;
+}
+
+
+span{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 5%;
+  height: 2em;
+  padding: 2px;
+}
+
+span:hover{
+  background-color: #fff;
 }
 
 .tarefas{
@@ -119,7 +159,7 @@ h1{
   }
   
   .display{
-    width: 110%;
+    width: 100%;
   }
   
   .display input{
@@ -127,8 +167,8 @@ h1{
     padding: 10px 0px 5px 5px;
     font-size: 15px;
   }
-  .display button{
-    width: 40%;
+  .btn-tarefa{
+    width: 30%;
     padding: 10px 5px 10px 5px;
     font-size: 11px;
   }

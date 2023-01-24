@@ -1,6 +1,7 @@
 let inputTarefa = document.querySelector('.input-tarefa')
 let btnTarefa = document.querySelector('.btn-tarefa')
 let tarefa = document.querySelector('.tarefas')
+let retorno = document.querySelector('.retorno')
 
 if(localStorage.key(0) != null) adicionaTarefaSalva()
 
@@ -10,12 +11,37 @@ inputTarefa.addEventListener('keypress',(e) => {
   if(e.keyCode === 13) criaTarefa(vinput)
 })
 
+document.addEventListener('keypress', (e) =>{
+  if(e.ctrlKey || e.metaKey && e.key === 'z') desfazer()
+})
+
 btnTarefa.addEventListener('click', () => {
   if(!inputTarefa.value) return
   let vinput = inputTarefa.value 
   criaTarefa(vinput)
 })
 
+retorno.addEventListener('click', () => {
+  try {
+    if(localStorage.key(0) !== null ){
+      desfazer()
+      return
+    } 
+  } catch (error) {
+  }
+})
+
+function desfazer(){
+  //remove el
+  const tarefasList = document.querySelectorAll('li.tarefa')
+  const itemRemover = tarefasList[tarefasList.length  - 1]
+  itemRemover.remove()
+
+  //remove do localstorage
+  const  tarefasSalvas = JSON.parse(localStorage.getItem('tarefas'))
+  tarefasSalvas.splice(-1, 1)
+  salvarTarefas()  
+}
 
 function limpaInput(){
   inputTarefa.value = ''
