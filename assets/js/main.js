@@ -12,6 +12,7 @@ class Lista{
       this.salvarTarefas()
     }
   }
+  
   desfazer(){
     //remove el
     const tarefasList = document.querySelectorAll('li.tarefa')
